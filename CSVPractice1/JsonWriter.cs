@@ -16,7 +16,7 @@ public class JsonWriter : IWriter
         foreach (var student in students)
         {
             json = JsonSerializer.Serialize(student);
-            using (var file = File.Create($"{filePath}\\{student.NationalCode}.json"))        
+            using (var file = File.Create($"{filePath}\\{student.NationalCode}.json")) ;       
             File.WriteAllText($"{filePath}\\{student.NationalCode}.json", json);
         }
     }
